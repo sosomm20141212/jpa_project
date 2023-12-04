@@ -1,0 +1,20 @@
+<!--객체 생성-->
+<html>
+    <body>
+        <h2>이 리스트의 오브젝트는 [[${listObject}]]이다</h2><br>
+        [[${listObject[0]}]] <br>  <!--HtmlController의 listObject값 넘겨 받음-->
+        [[${listObject[1]}]] <br><br>
+        <hr>
+        <h2>맵 오브젝트</h2>
+        [[${mapObject}]]<br>
+        [[${mapObject.key1}]]<br>     <!--key 호출 방법 1-->
+        [[${mapObject["key2"]}]]      <!--key 호출 방법 2-->
+        <hr>
+        <h2>모델 객체</h2>
+        [[${demoObject}]]<br>
+        <hr>
+        [[${demoObject1[0]["user"]}]]<br>
+        [[${demoObject1[0]}]]<br>
+        [[${demoObject1[1]}]]
+    </body>
+</html>

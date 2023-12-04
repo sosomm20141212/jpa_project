@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <!-- <p th:text="${mode.user}"></p>  객체가 없을 때는 에러가 발생한다. 이때는 if문을 이용한다 -->
+        <p th:if="${mode} != null" th:text="${mode.user}"></p>
+        <p th:unless="${mode} != null">조회된 데이터가 없습니다</p>         <!--th:text에서는 띄어쓰기 적용 안된다-->
+        
+        <span th:switch="${mode.seq}">
+            <span th:case="1">A</span>
+            <span th:case="2">B</span>
+            <span th:case="3">C</span>
+        </span>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>userlist</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>순번</th>
+            <th>이름</th>
+        </tr>
+        <tr th:each="i : ${userList}">     <!--java for문-->
+            <td th:text="${i.seq}"></td>
+            <td th:text="${i.user}"></td>
+        </tr>
+    </table>
+    <!-- <table>
+        <tr th:each="data : ${#numbers.sequence(1,10)}">   //number 함수 , 10번 출력된다
+            <td>1</td>
+        </tr>
+    </table> -->
+    <table>
+        <tr th:each="i : ${#numbers.sequence(1,9)}">
+            <td th:text="${i}"></td>
+            <td th:text="${i+1}"></td>
+            <td th:text="${i+2}"></td>
+        </tr>
+    </table>
+</body>
+</html>

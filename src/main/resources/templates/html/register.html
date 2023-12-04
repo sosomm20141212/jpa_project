@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <body>
+            <form action="/register" method="post">
+                ID : <input type="text" name="memberId"
+                th:placeholder="${session.member.memberId} + ' 는 존재하는 아이디입니다.'"><br>
+                NAME : <input type="text" name="memberName" th:value="${session.member.memberName}"><br>
+                PW : <input type="password" name="memberPw" th:value="${session.member.memberPw}"> <br>
+                <input type="submit" value="회원가입">
+            </form>
+    </body>
+</html>
